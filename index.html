@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Tip Calculator</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta name="author" content="Tyler Degand">
+        <meta name="keywords" content="Calculator, tips, tip, gratuity">
+        <meta name="description" content="Calculate your tip here!">
+        <meta name="robots" content="index, follow">
+        <meta name="mobile-web-app-capable" content="yes">
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <meta name="apple-mobile-web-app-status-bar-style" content="default">
+    
+        <link rel="stylesheet" href="./style.css" />
+
+        <meta property="og:title" content="Tip Calculator">
+        <meta property="og:description" content="Calculate your tip here!">
+        <meta property="og:site_name" content="Tip Calculator">
+        <meta property="og:type" content="website">
+
+        <meta name="twitter:card" content="summary">
+        <meta name="twitter:title" content="Tip Calculator">
+        <meta name="twitter:description" content="Calculate your tip here!">
+    </head>
+    <body>
+        <header>
+            <h1>Calculate your Tip!</h1>
+        </header>
+        <main>
+                <h2>Lets Calculator your tip!</h2>
+                <p>Input your bill, select desired percentage</p>
+            <form>
+                <label for="amount">Bill Amount:</label>
+                <input type="number" name="amount" id="amount" min="0" max="1000000" required>
+
+                <label for="percentage">Percentage:</label>
+                <select name="percentage" id="percentage" required>
+                    <option value="5%">5%</option>
+                    <option value="10%">10%</option>
+                    <option value="15%">15%</option>
+                    <option value="20%">20%</option>
+                    <option value="25%">25%</option>
+                    <option value="30%">30%</option>
+                </select>
+
+                <h2>Splitting the bill?</h2>
+
+                <label for="people">How many people?</label>
+                <input type="number" name="people" id="people" min="0" max="50">
+
+                <h2>Your tip!</h2>
+                <h3>$0.00</h3>
+            </form>
+        </main>
+        <footer>
+            <span>&copy; Tyler Degand 2020</span>
+        </footer>
+    </body>
+</html>
