@@ -31,11 +31,11 @@
         <main role="main content">
             <div class="conContainer">
                 <div class="formInstructions">
-                    <h2>Lets Calculator your tip!</h2>
+                    <h2>Lets Calculate your tip!</h2>
                     <p>Input your bill, select desired percentage</p>
                 </div>
                 <form>
-                    <label for="amount">Bill Amount:</label><input type="number" name="amount" id="amount" min="0" max="1000000" step=".01"required><br>
+                    <label for="amount">Bill Amount:</label><input type="number" name="amount" id="amount" value="0" min="0" max="1000000" step=".01"required><br>
 
                     <label for="percentage">Percentage:</label><select name="percentage" id="percentage" required>
                         <option value="5%">5%</option>
@@ -48,7 +48,7 @@
 
                     <h2>Splitting the bill?</h2>
 
-                    <label for="people">How many people?</label><input type="number" name="people" id="people" min="0" max="50"><br>
+                    <label for="people">How many people?</label><input type="number" name="people" id="people" value="0" min="0" max="50"><br>
 
                     <button role="button">Submit</button>
                 </form>
