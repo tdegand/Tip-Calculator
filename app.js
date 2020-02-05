@@ -19,7 +19,7 @@ const calculateTips = () => {
         document.getElementById('finalAmount').innerHTML = "$" + share;
     }    
 }
-//event listener to call first function upon click
+//event listener to call function upon click
 document.getElementById('submit').addEventListener('click', calculateTips);
 
 
