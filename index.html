@@ -32,41 +32,21 @@
 				<p>Input your bill, select desired percentage</p>
 			</div>
 			<form>
-				<label for="amount">Bill Amount:</label><input id="amount" max="1000000" min="0" name="amount"
-				required="" step=".01" type="number" value="0"><br>
-				<label for="percentage">Percentage:</label><select id="percentage" name="percentage" required=
-				"">
-					<option value="">
-						5%
-					</option>
-					<option value="">
-						10%
-					</option>
-					<option value="">
-						15%
-					</option>
-					<option value="">
-						20%
-					</option>
-					<option value="">
-						25%
-					</option>
-					<option value="">
-						30%
-					</option>
-				</select><br>
-				<h2>Splitting the bill?</h2><label for="people">How many people?</label><input id="people" max=
-				"50" min="0" name="people" type="number" value="0"><br>
-				<button>Submit</button>
+                <label for="amount">Bill Amount:</label><input id="amount" max="1000000" min="0" name="amount" step=".01" type="number" value="0" required><br>
+                <label for="percentage">Percentage:</label><input id="percentage" name="percentage" min="0" max="100" value="0" required></input><br>
+                <h2>Splitting the bill?</h2>
+                <label for="people">How many people?</label><input id="people" max="50" min="0" name="people" type="number"><br>
+				<button type ="button" id="submit">Submit</button>
 			</form>
 			<div class="results">
-				<h2>Your tip!</h2>
-				<h3>$0.00</h3>
+				<h2 id="share">Your tip!</h2>
+				<h3 id="finalAmount">$0.00</h3>
 			</div>
 		</div>
 	</main>
 	<footer>
 		<span>&copy; Tyler Degand 2020</span>
-	</footer>
+    </footer>
+    <script src="./app.js"></script>
 </body>
 </html>
