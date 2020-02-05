@@ -163,6 +163,10 @@ span {
 }
 @media screen and (max-width: 560px) {
 	/*===============Main=================*/
+	body {
+		height: 800px;
+		width: 100%;
+	}
 	.conContainer {
 		min-width: 20em;
 	}
