@@ -159,6 +159,7 @@ footer {
 span {
 	display: block;
 	padding-top: 1em;
+	font-weight: bold;
 	color: #fff;
 	font-family: 'Trykker', serif;
 }
