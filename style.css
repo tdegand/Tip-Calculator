@@ -21,7 +21,7 @@ html {
 }
 body {
 	height: 100%;
-	width: 100%;
+	width: inherit;
 	position: absolute;
 	background-image: url(./assets/full-bloom.png);
 	background-position: center;
@@ -30,7 +30,7 @@ body {
 /*===============Header=================*/
 
 header {
-	position: fixed;
+	position: relative;
 	top: 0;
 	left: 0;
 	height: 4.6em;
@@ -38,7 +38,6 @@ header {
 	text-align: center;
 	z-index: 1;
 	background-color: #1CA870;
-	box-shadow: 0px 3px 3px 2px rgba(0, 0, 0, .4);
 }
 h1 {
 	padding-top: .5em;
@@ -50,26 +49,21 @@ h1 {
 main {
 	height: 100%;
 	width: 100%;
-	display: flex;
-	flex-direction: row;
-	align-items: center;
-	justify-content: center;
+	display: block;
 }
 .conContainer {
 	position: relative;
-	height: 70%;
-	width: 40%;
-	min-width: 35em;
+	height: 100%;
+	width: 60%;
 	max-width: 40em;
 	margin: 0 auto;
+	padding: 80px 20px;
 	text-align: center;
 	color: #fff;
 	background-color: #A81C55;
-	border-radius: 40px;
 	box-shadow: 0px 3px 6px 4px rgba(0, 0, 0, .35);
 }
 .formInstructions {
-	margin-top: 10px;
 	height: 4.5em;
 	line-height: 2em;
 	font-family: 'Cairo', sans-serif;
@@ -80,10 +74,10 @@ main {
 	font-size: 30px;
 }
 form {
-	width: 27.5em;
+	max-width: 27.5em;
 	height: 400px;
 	margin: 0 auto;
-	line-height: 4em;
+	line-height: 2em;
 	text-align: left;
 }
 form h2 {
@@ -91,8 +85,9 @@ form h2 {
 }
 button {
 	display: block;
-	margin: 20px auto 0 auto;
+	margin: 50px auto 0 auto;
 	padding: 10px 20px;
+	width: 130px;
 	border-radius: 40px;
 	border: none;
     font-family: 'Trykker', serif;
@@ -113,15 +108,13 @@ form h2, button {
 }
 label {
 	display: inline-block;
-	width: 50%;
 	text-align: center;
-	padding-right: 10px;
 	font-family: 'Trykker', serif;
 }
 input, select {
-	width: 220px;
+	width: 100%;
 	height: 30px;
-	border-radius: 40px;
+	border-radius: 5px;
 	border: none;
 	text-indent: 10px;
 	outline: none;
@@ -135,15 +128,23 @@ input[type=number] {
 	-moz-appearance: textfield;
 }
 .results {
+	display: block;
+    padding-top: 50px;
 	height: 4.5em;
-	line-height: 2em;
-	font-family: 'Alegreya Sans SC', sans-serif;
-	position: absolute;
-	bottom: 20px;
 	width: 100%;
+	line-height: 2em;
+	font-family: 'Alegreya Sans SC', sans-serif;	
 }
 .results h3 {
 	font-size: 30px;
+}
+fieldset {
+	border: none;
+	line-height: 2.5em;
+	height: max-content;
+}
+#splitting {
+	padding-top: 30px;
 }
 /*===============Footer=================*/
 
@@ -164,22 +165,19 @@ span {
 	color: #fff;
 	font-family: 'Trykker', serif;
 }
-@media screen and (max-width: 560px) {
+@media screen and (max-width: 768px) {
 	/*===============Main=================*/
-	body {
-		height: 800px;
+	header{
+		box-shadow: unset;
+	}
+	.conContainer{
 		width: 100%;
+		height: 100%;
+		max-width: unset;
+		border-radius: 0;
+		padding: 50px 10px;
 	}
-	.conContainer {
-		min-width: 20em;
-	}
-	.formInstructions {
-		margin-top: 10px;
-	}
-	form {
-		width: 20em;
-	}
-	input, select {
-		width: 150px;
+	fieldset{
+		padding: 0px 20px;
 	}
 }
